@@ -1,0 +1,42 @@
+app = "gay-minecraft"
+primary_region = "atl"
+
+[build]
+    image = "itzg/minecraft-server:java17-alpine"
+
+[env]
+    TYPE = "FORGE"
+    VERSION = "1.19.2"
+    FORGE_VERSION = "43.2.14"
+    EULA = "true"
+    GENERIC_PACK = "https://freedman.dev/modpacks/Magic_Mods_Amaya_Likes__Automat-the_third_one__SERVER.zip"
+    # System resource config
+    MEMORY = "3G"
+    ENABLE_AUTOPAUSE = "TRUE"
+    AUTOPAUSE_TIMEOUT_EST = "3600"
+    AUTOPAUSE_TIMEOUT_INIT = "600"
+    AUTOPAUSE_TIMEOUT_KN = "120"
+    AUTOPAUSE_PERIOD = "10"
+    AUTOPAUSE_KNOCK_INTERFACE = "eth0"
+    # MC Server config
+    MODE = "survival"
+    SERVER_NAME = "gay_minecraft"
+    MOTD = "gay minecraft"
+    DIFFICULTY = "easy"
+    SEED = "gay minecraft"
+    LEVEL = "gay_minecraft_v2"
+    # Whitelist config
+    OVERRIDE_WHITELIST = "true"
+    ENABLE_WHITELIST = "true"
+    # Josh, Justin, Amaya, Dani
+    WHITELIST = "3bf6398e-99ce-4cd6-b536-09d448ed6395,c8c6e23a-abfa-4a62-b6c7-04dfe7677b71,dc24257a-d28d-4e49-a94f-0d77669785dc,13eb5b51-06b5-489a-90be-8fbab4c1d754"
+
+[mounts]
+    source = "mc_data"
+    destination = "/data"
+
+[[services]]
+    internal_port = 25565
+    protocol = "tcp"
+    ports = { port = 25565 }
+    concurrency = { type = "connections", hard_limit = 25, soft_limit = 20 }
