@@ -11,7 +11,7 @@ primary_region = "atl"
     EULA = "true"
     GENERIC_PACK = "https://freedman.dev/minecraft/Magic_Mods_Amaya_Likes__Automat-the_third_one__SERVER.zip"
     # min heap size of 1GB, max of 3GB
-    INIT_MEMORY = "1G"
+    INIT_MEMORY = "512M"
     MAX_MEMORY = "3G"
     # autopause makes the server use fewer resources after no one
     # has connected to it for more than 5 minutes. once someone
