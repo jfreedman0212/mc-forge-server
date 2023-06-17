@@ -10,7 +10,7 @@ primary_region = "atl"
     FORGE_VERSION = "43.2.14"
     EULA = "true"
     GENERIC_PACK = "https://freedman.dev/minecraft/Magic_Mods_Amaya_Likes__Automat-the_third_one__SERVER.zip"
-    # min heap size of 1GB, max of 3GB
+    # min heap size of 512MB, max of 3GB
     INIT_MEMORY = "512M"
     MAX_MEMORY = "3G"
     # autopause makes the server use fewer resources after no one
