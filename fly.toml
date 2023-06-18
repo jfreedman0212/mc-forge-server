@@ -9,7 +9,9 @@ primary_region = "atl"
     VERSION = "1.19.2"
     FORGE_VERSION = "43.2.14"
     EULA = "true"
-    GENERIC_PACK = "https://freedman.dev/minecraft/Magic_Mods_Amaya_Likes__Automat-the_third_one__SERVER.zip"
+    # modpack/datapack config
+    GENERIC_PACK = "https://freedman.dev/minecraft/Magic_Mods_Amaya_Likes__Automat-the_fourth_one__SERVER.zip"
+    DATAPACKS = "https://freedman.dev/minecraft/datapacks.zip"
     # min heap size of 512MB, max of 3GB
     INIT_MEMORY = "512M"
     MAX_MEMORY = "3G"
