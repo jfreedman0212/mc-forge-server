@@ -9,8 +9,10 @@ primary_region = "atl"
     VERSION = "1.19.2"
     FORGE_VERSION = "43.2.14"
     EULA = "true"
-    # modpack config
+    # modpack/datapack config
     GENERIC_PACK = "https://freedman.dev/minecraft/Magic_Mods_Amaya_Likes__Automat-the_fourth_one__SERVER.zip"
+    DATAPACKS = "/datapacks"
+    VANILLATWEAKS_SHARECODE = "NmOAok, vXcnMe, yoptLT, AtuqRB, zJ84rA"
     # min heap size of 512MB, max of 3GB
     INIT_MEMORY = "512M"
     MAX_MEMORY = "3G"
@@ -25,6 +27,10 @@ primary_region = "atl"
     # prevents logs from building up indefinitely
     ENABLE_ROLLING_LOGS = "true"
     # MC Server config
+    RCON_CMDS_STARTUP = """
+        gamerule keepInventory false
+        gamerule playersSleepingPercentage 1
+    """
     MODE = "survival"
     SERVER_NAME = "gay_minecraft"
     MOTD = "gay minecraft"
