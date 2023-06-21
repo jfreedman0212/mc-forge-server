@@ -23,7 +23,6 @@ primary_region = "atl"
     AUTOSTOP_TIMEOUT_EST = "10" # TODO: increase to 3600 seconds (1 hour)
     AUTOSTOP_TIMEOUT_INIT = "10" # TODO: increase to 3600 seconds (1 hour)
     AUTOSTOP_PERIOD = "1" # TODO: increase to 10 seconds
-    DEBUG_AUTOSTOP = "TRUE"
     # prevents logs from building up indefinitely
     ENABLE_ROLLING_LOGS = "true"
     # MC Server config
