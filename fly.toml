@@ -20,9 +20,9 @@ primary_region = "atl"
     # amount of time. while this ACTUALLY turns off the underlying Fly Machine,
     # the config in [[services]] will turn it back on when someone connects
     ENABLE_AUTOSTOP = "TRUE"
-    AUTOSTOP_TIMEOUT_EST = "10" # TODO: increase to 3600 seconds (1 hour)
-    AUTOSTOP_TIMEOUT_INIT = "10" # TODO: increase to 3600 seconds (1 hour)
-    AUTOSTOP_PERIOD = "1" # TODO: increase to 10 seconds
+    AUTOSTOP_TIMEOUT_EST = "120" # TODO: increase to 3600 seconds (1 hour)
+    AUTOSTOP_TIMEOUT_INIT = "60" # TODO: increase to 3600 seconds (1 hour)
+    AUTOSTOP_PERIOD = "10" # TODO: increase to 10 seconds
     # prevents logs from building up indefinitely
     ENABLE_ROLLING_LOGS = "true"
     # MC Server config
