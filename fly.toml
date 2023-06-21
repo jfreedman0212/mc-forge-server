@@ -9,22 +9,19 @@ primary_region = "atl"
     VERSION = "1.19.2"
     FORGE_VERSION = "43.2.14"
     EULA = "true"
-    # modpack/datapack config
+    # modpack config
     GENERIC_PACK = "https://freedman.dev/minecraft/Magic_Mods_Amaya_Likes__Automat-the_fourth_one__SERVER.zip"
-    DATAPACKS = "https://freedman.dev/minecraft/datapacks.zip"
     # min heap size of 512MB, max of 3GB
     INIT_MEMORY = "512M"
     MAX_MEMORY = "3G"
-    # autopause makes the server use fewer resources after no one
-    # has connected to it for more than 5 minutes. once someone
-    # connects, it spins the JVM back up
-    ENABLE_AUTOPAUSE = "TRUE"
-    AUTOPAUSE_TIMEOUT_EST = "3600"
-    AUTOPAUSE_TIMEOUT_INIT = "600"
-    AUTOPAUSE_TIMEOUT_KN = "120"
-    AUTOPAUSE_PERIOD = "10"
-    AUTOPAUSE_KNOCK_INTERFACE = "eth0"
-    MAX_TICK_TIME = "-1"
+    # autostop kills the server after no one has connected for a configured
+    # amount of time. while this ACTUALLY turns off the underlying Fly Machine,
+    # the config in [[services]] will turn it back on when someone connects
+    ENABLE_AUTOSTOP = "TRUE"
+    AUTOSTOP_TIMEOUT_EST = "10" # TODO: increase to 3600 seconds (1 hour)
+    AUTOSTOP_TIMEOUT_INIT = "10" # TODO: increase to 3600 seconds (1 hour)
+    AUTOSTOP_PERIOD = "1" # TODO: increase to 10 seconds
+    DEBUG_AUTOSTOP = "TRUE"
     # prevents logs from building up indefinitely
     ENABLE_ROLLING_LOGS = "true"
     # MC Server config
@@ -51,4 +48,7 @@ primary_region = "atl"
     internal_port = 25565
     protocol = "tcp"
     ports = { port = 25565 }
+    auto_stop_machines = false
+    auto_start_machines = true
+    min_machines_running = 0
     concurrency = { type = "connections", hard_limit = 25, soft_limit = 20 }
