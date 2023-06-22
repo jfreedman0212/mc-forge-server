@@ -11,8 +11,8 @@ primary_region = "atl"
     EULA = "true"
     # modpack/datapack config
     GENERIC_PACK = "https://freedman.dev/minecraft/Magic_Mods_Amaya_Likes__Automat-the_fourth_one__SERVER.zip"
-    DATAPACKS = "/datapacks"
-    VANILLATWEAKS_SHARECODE = "NmOAok, vXcnMe, yoptLT, AtuqRB, zJ84rA"
+    # non-vanillatweaks datapacks are manually installed via SSH/SFTP
+    VANILLATWEAKS_SHARECODE = "NmOAok,vXcnMe,yoptLT,AtuqRB,zJ84rA"
     # min heap size of 512MB, max of 3GB
     INIT_MEMORY = "512M"
     MAX_MEMORY = "3G"
@@ -20,15 +20,15 @@ primary_region = "atl"
     # amount of time. while this ACTUALLY turns off the underlying Fly Machine,
     # the config in [[services]] will turn it back on when someone connects
     ENABLE_AUTOSTOP = "TRUE"
-    AUTOSTOP_TIMEOUT_EST = "120" # TODO: increase to 3600 seconds (1 hour)
-    AUTOSTOP_TIMEOUT_INIT = "60" # TODO: increase to 3600 seconds (1 hour)
-    AUTOSTOP_PERIOD = "10" # TODO: increase to 10 seconds
+    AUTOSTOP_TIMEOUT_EST = "3600" # 3600 seconds = 1 hour
+    AUTOSTOP_TIMEOUT_INIT = "1800" # 1800 seconds = 30 minutes
+    AUTOSTOP_PERIOD = "10" # checks every 10 seconds for activity
     # prevents logs from building up indefinitely
     ENABLE_ROLLING_LOGS = "true"
     # MC Server config
     RCON_CMDS_STARTUP = """
-        gamerule keepInventory false
-        gamerule playersSleepingPercentage 1
+        /gamerule keepInventory false
+        /gamerule playersSleepingPercentage 1
     """
     MODE = "survival"
     SERVER_NAME = "gay_minecraft"
