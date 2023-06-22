@@ -27,7 +27,7 @@ primary_region = "atl"
     ENABLE_ROLLING_LOGS = "true"
     # MC Server config
     RCON_CMDS_STARTUP = """
-        /gamerule keepInventory false
+        /gamerule keepInventory true
         /gamerule playersSleepingPercentage 1
     """
     MODE = "survival"
