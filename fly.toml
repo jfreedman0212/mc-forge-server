@@ -49,6 +49,7 @@ primary_region = "atl"
     source = "mc_data"
     destination = "/data"
 
+# Main MC server TCP port
 [[services]]
     internal_port = 25565
     protocol = "tcp"
@@ -57,3 +58,9 @@ primary_region = "atl"
     auto_start_machines = true
     min_machines_running = 0
     concurrency = { type = "connections", hard_limit = 25, soft_limit = 20 }
+
+# UDP port for the voice chat mod
+[[services]]
+    internal_port = 24454
+    protocol = "udp"
+    ports = { port = 24454 }
