@@ -33,7 +33,7 @@ primary_region = "atl"
     MODE = "survival"
     SERVER_NAME = "gay_minecraft"
     MOTD = "gay minecraft"
-    DIFFICULTY = "easy"
+    DIFFICULTY = "normal"
     SEED = "gay minecraft"
     LEVEL = "gay_minecraft_v2"
     # Operator/admin config
