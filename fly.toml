@@ -36,6 +36,8 @@ primary_region = "atl"
     DIFFICULTY = "normal"
     SEED = "gay minecraft"
     LEVEL = "gay_minecraft_v2"
+    SPAWN_PROTECTION = "0"
+    ALLOW_FLIGHT = "TRUE"
     # Operator/admin config
     OVERRIDE_OPS = "true"
     OPS_FILE = "https://freedman.dev/minecraft/ops.json"
