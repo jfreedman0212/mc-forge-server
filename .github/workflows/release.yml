@@ -1,0 +1,20 @@
+name: release
+# Run this job whenever a push is made that starts with 'v'
+on: [push]
+  #  push:
+  #  tags:
+  #    - 'v*'
+jobs:
+    release:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout Repository
+          uses: actions/checkout@v3
+        - name: Create a Release
+          uses: softprops/action-gh-release@v1
+          env:
+            GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+          with:
+            files:
+              - ops.json
+              - whitelist.json
