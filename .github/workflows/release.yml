@@ -13,6 +13,13 @@ jobs:
         - name: Create Client Modpack
           working-directory: modpack
           run: zip -r client.zip *
+        - name: Download Mods from Curseforge
+          working-directory: modpack
+          run: python3 -c 'import json; print("\n".join(["https://www.curseforge.com/api/v1/mods/%i/files/%i/download" % (f["projectID"], f["fileID"]) for f in json.load(open("manifest.json", "r"))["files"] if f["required"]]))' | wget -q -i - -P mods/ --content-disposition --show-progress
+        - name: Setup appropriate folder name for server pack
+          run: mv modpack/overrides modpack/config
+        - name: Create Server pack
+          run: zip -r server.zip modpack/config modpack/mods
         - name: Create a Release
           uses: softprops/action-gh-release@v1
           env:
@@ -22,4 +29,5 @@ jobs:
               ops.json
               whitelist.json
               modpack/client.zip
+              server.zip
 
