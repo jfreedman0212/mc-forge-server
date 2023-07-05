@@ -1,0 +1,20 @@
+[
+	{
+		"uuid": "3bf6398e-99ce-4cd6-b536-09d448ed6395",
+		"name": "javascriptisbad",
+		"level": 4,
+		"bypassesPlayerLimit": false
+	},
+	{
+		"uuid": "c8c6e23a-abfa-4a62-b6c7-04dfe7677b71",
+		"name": "CoolEggs",
+		"level": 4,
+		"bypassesPlayerLimit": false
+	},
+	{
+		"uuid": "dc24257a-d28d-4e49-a94f-0d77669785dc",
+		"name": "foofoomaya920",
+		"level": 4,
+		"bypassesPlayerLimit": false
+	}
+]
