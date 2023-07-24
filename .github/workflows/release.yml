@@ -15,9 +15,12 @@ jobs:
           run: zip -r client.zip *
         - name: Move Client Modpack
           run: mv modpack/client.zip .
-        - name: Download Mods from Curseforge
+        - name: Download Client Mods from Curseforge
           working-directory: modpack
           run: python3 ../print_curseforge_urls.py | wget -q -i - -P mods/ --content-disposition --show-progress
+        - name: Download Server Mods from Curseforge
+          working-directory: modpack
+          run: cat ../server_only_mods.txt | wget -q -i - -P mods/ --content-disposition --show-progress
         - name: Setup appropriate folder name for server pack
           run: |
             mv modpack/overrides/config modpack/config
