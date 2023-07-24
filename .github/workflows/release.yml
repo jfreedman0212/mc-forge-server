@@ -13,6 +13,8 @@ jobs:
         - name: Create Client Modpack
           working-directory: modpack
           run: zip -r client.zip *
+        - name: Move Client Modpack
+          run: mv modpack/client.zip .
         - name: Download Mods from Curseforge
           working-directory: modpack
           run: python3 -c 'import json; print("\n".join(["https://www.curseforge.com/api/v1/mods/%i/files/%i/download" % (f["projectID"], f["fileID"]) for f in json.load(open("manifest.json", "r"))["files"] if f["required"]]))' | wget -q -i - -P mods/ --content-disposition --show-progress
@@ -28,6 +30,12 @@ jobs:
             files: |
               ops.json
               whitelist.json
-              modpack/client.zip
+              client.zip
               server.zip
+        - name: Setup Flyctl
+          uses: superfly/flyctl-actions/setup-flyctl@master
+        - name: Deploy to Fly.io
+          run: flyctl deploy --remote-only
+          env:
+            FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
