@@ -10,7 +10,7 @@ primary_region = "atl"
     FORGE_VERSION = "43.2.14"
     EULA = "true"
     # modpack/datapack config
-    GENERIC_PACK = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.6/server.zip"
+    GENERIC_PACK = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.7/server.zip"
     # non-vanillatweaks datapacks are manually installed via SSH/SFTP
     VANILLATWEAKS_SHARECODE = "NmOAok,vXcnMe,yoptLT,AtuqRB,zJ84rA"
     # min heap size of 512MB, max of 3GB
@@ -40,12 +40,12 @@ primary_region = "atl"
     ALLOW_FLIGHT = "TRUE"
     # Operator/admin config
     OVERRIDE_OPS = "true"
-    OPS_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.6/ops.json"
+    OPS_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.7/ops.json"
     # Whitelist config
     OVERRIDE_WHITELIST = "true"
     ENABLE_WHITELIST = "true"
     ENFORCE_WHITELIST = "true"
-    WHITELIST_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.6/whitelist.json"
+    WHITELIST_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.7/whitelist.json"
 
 [mounts]
     source = "mc_data"
