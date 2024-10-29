@@ -9,7 +9,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Repository
-          uses: actions/checkout@v3
+          uses: actions/checkout@v4
         - name: Create Client Modpack
           working-directory: modpack
           run: zip -r client.zip *
@@ -22,18 +22,18 @@ jobs:
           working-directory: modpack
           run: cat ../server_only_mods.txt | wget -q -i - -P mods/ --content-disposition --show-progress
         - name: Put config folder in right place
-          if: ${{ env.HAS_OVERRIDES_FOLDER == 'true' }}
+          if: ${{ vars.HAS_OVERRIDES_FOLDER == 'true' }}
           run: |
             mv modpack/overrides/config modpack/config
             rm -rf overrides
         - name: Create Server pack (with config)
-          if: ${{ env.HAS_OVERRIDES_FOLDER == 'true' }}
+          if: ${{ vars.HAS_OVERRIDES_FOLDER == 'true' }}
           run: zip -r server.zip modpack/config modpack/mods
         - name: Create Server pack (without config)
-          if: ${{ env.HAS_OVERRIDES_FOLDER == 'false' }}
+          if: ${{ vars.HAS_OVERRIDES_FOLDER == 'false' }}
           run: zip -r server.zip modpack/mods
         - name: Create a Release
-          uses: softprops/action-gh-release@v1
+          uses: softprops/action-gh-release@v2
           env:
             GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
           with:
