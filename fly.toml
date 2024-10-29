@@ -10,11 +10,11 @@ VERSION = "1.20.1"
 NEOFORGE_VERSION = "latest"
 EULA = "true"
 # modpack/datapack config
-GENERIC_PACK = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.12/server.zip"
+GENERIC_PACK = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.13/server.zip"
 # non-vanillatweaks datapacks are manually installed via SSH/SFTP
 VANILLATWEAKS_SHARECODE = "NmOAok,vXcnMe,yoptLT,AtuqRB,zJ84rA"
 # heap size of 3 GB
-MEMORY = "4G"
+MEMORY = "3G"
 # autostop kills the server after no one has connected for a configured
 # amount of time. while this ACTUALLY turns off the underlying Fly Machine,
 # the config in [[services]] will turn it back on when someone connects
@@ -39,12 +39,12 @@ SPAWN_PROTECTION = "0"
 ALLOW_FLIGHT = "TRUE"
 # Operator/admin config
 OVERRIDE_OPS = "true"
-OPS_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.12/ops.json"
+OPS_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.13/ops.json"
 # Whitelist config
 OVERRIDE_WHITELIST = "true"
 ENABLE_WHITELIST = "true"
 ENFORCE_WHITELIST = "true"
-WHITELIST_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.12/whitelist.json"
+WHITELIST_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.13/whitelist.json"
 
 [mounts]
 source = "mc_data"
