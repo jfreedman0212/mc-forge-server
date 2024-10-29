@@ -2,67 +2,61 @@ app = "gay-minecraft"
 primary_region = "atl"
 
 [build]
-    image = "itzg/minecraft-server:java17-alpine"
+image = "itzg/minecraft-server:java21-alpine"
 
 [env]
-    TYPE = "FORGE"
-    VERSION = "1.19.2"
-    FORGE_VERSION = "43.2.14"
-    EULA = "true"
-    # modpack/datapack config
-    GENERIC_PACK = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.7/server.zip"
-    # non-vanillatweaks datapacks are manually installed via SSH/SFTP
-    VANILLATWEAKS_SHARECODE = "NmOAok,vXcnMe,yoptLT,AtuqRB,zJ84rA"
-    # min heap size of 512MB, max of 3GB
-    INIT_MEMORY = "512M"
-    MAX_MEMORY = "3G"
-    # autostop kills the server after no one has connected for a configured
-    # amount of time. while this ACTUALLY turns off the underlying Fly Machine,
-    # the config in [[services]] will turn it back on when someone connects
-    ENABLE_AUTOSTOP = "TRUE"
-    AUTOSTOP_TIMEOUT_EST = "3600" # 3600 seconds = 1 hour
-    AUTOSTOP_TIMEOUT_INIT = "1800" # 1800 seconds = 30 minutes
-    AUTOSTOP_PERIOD = "10" # checks every 10 seconds for activity
-    # prevents logs from building up indefinitely
-    ENABLE_ROLLING_LOGS = "true"
-    # MC Server config
-    RCON_CMDS_STARTUP = """
+TYPE = "NEOFORGE"
+VERSION = "1.20.1"
+NEOFORGE_VERSION = "latest"
+EULA = "true"
+# modpack/datapack config
+GENERIC_PACK = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.8/server.zip"
+# non-vanillatweaks datapacks are manually installed via SSH/SFTP
+VANILLATWEAKS_SHARECODE = "NmOAok,vXcnMe,yoptLT,AtuqRB,zJ84rA"
+# min heap size of 512MB, max of 3GB
+INIT_MEMORY = "512M"
+MAX_MEMORY = "3G"
+# autostop kills the server after no one has connected for a configured
+# amount of time. while this ACTUALLY turns off the underlying Fly Machine,
+# the config in [[services]] will turn it back on when someone connects
+ENABLE_AUTOSTOP = "TRUE"
+AUTOSTOP_TIMEOUT_EST = "3600"  # 3600 seconds = 1 hour
+AUTOSTOP_TIMEOUT_INIT = "1800" # 1800 seconds = 30 minutes
+AUTOSTOP_PERIOD = "10"         # checks every 10 seconds for activity
+# prevents logs from building up indefinitely
+ENABLE_ROLLING_LOGS = "true"
+# MC Server config
+RCON_CMDS_STARTUP = """
         /gamerule keepInventory true
         /gamerule playersSleepingPercentage 1
     """
-    MODE = "survival"
-    SERVER_NAME = "gay_minecraft"
-    MOTD = "gay minecraft"
-    DIFFICULTY = "normal"
-    SEED = "gay minecraft"
-    LEVEL = "gay_minecraft_v2"
-    SPAWN_PROTECTION = "0"
-    ALLOW_FLIGHT = "TRUE"
-    # Operator/admin config
-    OVERRIDE_OPS = "true"
-    OPS_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.7/ops.json"
-    # Whitelist config
-    OVERRIDE_WHITELIST = "true"
-    ENABLE_WHITELIST = "true"
-    ENFORCE_WHITELIST = "true"
-    WHITELIST_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.7/whitelist.json"
+MODE = "survival"
+SERVER_NAME = "gay_minecraft"
+MOTD = "gay minecraft"
+DIFFICULTY = "normal"
+SEED = "4354585255707245098"
+LEVEL = "gay_minecraft_v3"
+SPAWN_PROTECTION = "0"
+ALLOW_FLIGHT = "TRUE"
+# Operator/admin config
+OVERRIDE_OPS = "true"
+OPS_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.8/ops.json"
+# Whitelist config
+OVERRIDE_WHITELIST = "true"
+ENABLE_WHITELIST = "true"
+ENFORCE_WHITELIST = "true"
+WHITELIST_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.8/whitelist.json"
 
 [mounts]
-    source = "mc_data"
-    destination = "/data"
+source = "mc_data"
+destination = "/data"
 
 # Main MC server TCP port
 [[services]]
-    internal_port = 25565
-    protocol = "tcp"
-    ports = { port = 25565 }
-    auto_stop_machines = false
-    auto_start_machines = true
-    min_machines_running = 0
-    concurrency = { type = "connections", hard_limit = 25, soft_limit = 20 }
-
-# UDP port for the voice chat mod
-[[services]]
-    internal_port = 24454
-    protocol = "udp"
-    ports = { port = 24454 }
+internal_port = 25565
+protocol = "tcp"
+ports = { port = 25565 }
+auto_stop_machines = false
+auto_start_machines = true
+min_machines_running = 0
+concurrency = { type = "connections", hard_limit = 25, soft_limit = 20 }

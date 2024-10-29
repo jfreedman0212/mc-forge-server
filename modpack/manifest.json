@@ -1,147 +1,112 @@
 {
   "minecraft": {
-    "version": "1.19.2",
+    "version": "1.20.1",
     "modLoaders": [
       {
-        "id": "forge-43.2.14",
+        "id": "neoforge-1.20.1-47.1.99",
         "primary": true
       }
     ]
   },
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
-  "name": "Magic Mods Amaya Likes + Automat",
-  "version": "the sixth one just to be sure",
+  "name": "Mindcraft 2 Boogaloo",
+  "version": "The Second One",
   "author": "",
   "files": [
     {
-      "projectID": 454372,
-      "fileID": 4548462,
-      "required": true
-    },
-    {
-      "projectID": 455982,
-      "fileID": 4576229,
-      "required": true
-    },
-    {
-      "projectID": 309927,
-      "fileID": 4523009,
-      "required": true
-    },
-    {
-      "projectID": 238222,
-      "fileID": 4494410,
-      "required": true
-    },
-    {
-      "projectID": 438332,
-      "fileID": 3871792,
+      "projectID": 531761,
+      "fileID": 5848102,
       "required": true
     },
     {
       "projectID": 548115,
-      "fileID": 4572069,
+      "fileID": 4721662,
       "required": true
     },
     {
-      "projectID": 225643,
-      "fileID": 4557912,
+      "projectID": 422301,
+      "fileID": 5787630,
       "required": true
     },
     {
-      "projectID": 293856,
-      "fileID": 3945752,
+      "projectID": 60028,
+      "fileID": 4921323,
       "required": true
     },
     {
-      "projectID": 549225,
-      "fileID": 4287474,
+      "projectID": 362479,
+      "fileID": 5844825,
       "required": true
     },
     {
-      "projectID": 491290,
-      "fileID": 4381343,
-      "required": true
-    },
-    {
-      "projectID": 306770,
-      "fileID": 4031402,
-      "required": true
-    },
-    {
-      "projectID": 245755,
-      "fileID": 4513838,
-      "required": true
-    },
-    {
-      "projectID": 531761,
-      "fileID": 4442591,
+      "projectID": 663141,
+      "fileID": 5149461,
       "required": true
     },
     {
       "projectID": 263420,
-      "fileID": 4593181,
+      "fileID": 4905607,
       "required": true
     },
     {
-      "projectID": 289479,
-      "fileID": 4390782,
-      "required": true
-    },
-    {
-      "projectID": 401955,
-      "fileID": 4585834,
-      "required": true
-    },
-    {
-      "projectID": 499980,
-      "fileID": 4620027,
-      "required": true
-    },
-    {
-      "projectID": 342543,
-      "fileID": 4588105,
-      "required": true
-    },
-    {
-      "projectID": 55438,
-      "fileID": 4374996,
-      "required": true
-    },
-    {
-      "projectID": 220318,
-      "fileID": 4034263,
-      "required": true
-    },
-    {
-      "projectID": 398521,
-      "fileID": 4525646,
-      "required": true
-    },
-    {
-      "projectID": 416089,
-      "fileID": 4584361,
+      "projectID": 626761,
+      "fileID": 4775549,
       "required": true
     },
     {
       "projectID": 615134,
-      "fileID": 4073854,
+      "fileID": 4784395,
       "required": true
     },
     {
-      "projectID": 530779,
-      "fileID": 4360603,
+      "projectID": 245755,
+      "fileID": 5500759,
       "required": true
     },
     {
-      "projectID": 295780,
-      "fileID": 4441712,
+      "projectID": 856996,
+      "fileID": 4861833,
       "required": true
     },
     {
-      "projectID": 563928,
-      "fileID": 4205732,
+      "projectID": 367178,
+      "fileID": 5640967,
+      "required": true
+    },
+    {
+      "projectID": 267458,
+      "fileID": 4678935,
+      "required": true
+    },
+    {
+      "projectID": 455982,
+      "fileID": 5721801,
+      "required": true
+    },
+    {
+      "projectID": 328085,
+      "fileID": 5838779,
+      "required": true
+    },
+    {
+      "projectID": 302529,
+      "fileID": 4794552,
+      "required": true
+    },
+    {
+      "projectID": 342584,
+      "fileID": 5840216,
+      "required": true
+    },
+    {
+      "projectID": 618298,
+      "fileID": 5801688,
+      "required": true
+    },
+    {
+      "projectID": 398521,
+      "fileID": 5051242,
       "required": true
     }
   ],
