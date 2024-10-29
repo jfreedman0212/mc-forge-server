@@ -21,12 +21,17 @@ jobs:
         - name: Download Server Mods from Curseforge
           working-directory: modpack
           run: cat ../server_only_mods.txt | wget -q -i - -P mods/ --content-disposition --show-progress
-        - name: Setup appropriate folder name for server pack
+        - name: Put config folder in right place
+          if: ${{ env.HAS_OVERRIDES_FOLDER == "true" }}
           run: |
             mv modpack/overrides/config modpack/config
             rm -rf overrides
-        - name: Create Server pack
+        - name: Create Server pack (with config)
+          if: ${{ env.HAS_OVERRIDES_FOLDER == "true" }}
           run: zip -r server.zip modpack/config modpack/mods
+        - name: Create Server pack (without config)
+          if: ${{ env.HAS_OVERRIDES_FOLDER == "false" }}
+          run: zip -r server.zip modpack/mods
         - name: Create a Release
           uses: softprops/action-gh-release@v1
           env:
