@@ -42,7 +42,17 @@ for Linux and Mac and assume some familiarity with the terminal.
 6. Run the Minecraft launcher as normal and select "Forge" from the dropdown
 7. Connect to the server!
 
-# Server administration info
+# Server Administration
+
+## External Repository Configuration
+
+There are 3 variables that get configured in GitHub for use in the Actions workflow:
+
+- `FLY_API_TOKEN`: Fly.io API token for the gay-minecraft app
+- `RELEASE_TOKEN`: GitHub personal access token
+- `HAS_OVERRIDES_FOLDER`: set to `true` if the `modpack/overrides` folder exists, otherwise set to `false`
+
+The first two are secrets since they're credentials for other systems. The last one is just a regular variable.
 
 ## Making Configuration Changes
 
@@ -61,6 +71,10 @@ the server doesn't have to be restarted and affect your players. However, here's
 That will kick off the Actions workflow and deploy the server. Check up on it to make sure it successfully
 restarted. As of 10/30/2024, I've had to manually start it each release for some reason... TODO: fix that.
 
+**Triggering a new release is critical for changes to take effect!** That's because the server looks for the _latest_
+release for all the config files. You may delete old releases as they're no longer needed. It might be useful
+to keep older versions of the modpacks around if those change.
+
 ## Adding Users to Allowlist or Ops
 
 Get the person's username and enter it into [mcuuid.net](https://mcuuid.net/). I like to have both the username and the UUID
@@ -70,4 +84,4 @@ to be completely sure I'm only allowing my friends.
 
 There's not an option in the Docker configuration (at least when I initially set it up in Summer 2023) to set up
 datapacks from a zip file. So, I've manually installed them through SFTP. This doesn't require a server restart
-in most cases.
+in most cases. TODO: make this a more comprehensive, step-by-step guide
