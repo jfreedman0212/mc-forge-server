@@ -11,14 +11,9 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Mindcraft 2 Boogaloo",
-  "version": "The Second One",
+  "version": "The Third One",
   "author": "",
   "files": [
-    {
-      "projectID": 531761,
-      "fileID": 5848102,
-      "required": true
-    },
     {
       "projectID": 548115,
       "fileID": 4721662,
@@ -60,11 +55,6 @@
       "required": true
     },
     {
-      "projectID": 245755,
-      "fileID": 5500759,
-      "required": true
-    },
-    {
       "projectID": 856996,
       "fileID": 4861833,
       "required": true
@@ -75,13 +65,13 @@
       "required": true
     },
     {
-      "projectID": 267458,
-      "fileID": 4678935,
+      "projectID": 455982,
+      "fileID": 5721801,
       "required": true
     },
     {
-      "projectID": 455982,
-      "fileID": 5721801,
+      "projectID": 267458,
+      "fileID": 4678935,
       "required": true
     },
     {
