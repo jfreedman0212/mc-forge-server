@@ -11,9 +11,14 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Mind Craft 2 Boogaloo Forge",
-  "version": "The First One",
+  "version": "The Second One",
   "author": "",
   "files": [
+    {
+      "projectID": 352835,
+      "fileID": 4725669,
+      "required": true
+    },
     {
       "projectID": 548115,
       "fileID": 4721662,
@@ -60,18 +65,8 @@
       "required": true
     },
     {
-      "projectID": 618298,
-      "fileID": 5801688,
-      "required": true
-    },
-    {
       "projectID": 230976,
       "fileID": 5375681,
-      "required": true
-    },
-    {
-      "projectID": 422301,
-      "fileID": 5787630,
       "required": true
     },
     {
@@ -92,6 +87,11 @@
     {
       "projectID": 263420,
       "fileID": 5773012,
+      "required": true
+    },
+    {
+      "projectID": 549225,
+      "fileID": 5811593,
       "required": true
     },
     {
