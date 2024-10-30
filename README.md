@@ -54,6 +54,9 @@ There are 3 variables that get configured in GitHub for use in the Actions workf
 
 The first two are secrets since they're credentials for other systems. The last one is just a regular variable.
 
+The `RELEASE_TOKEN` needs read-only "Metadata" permissions and read/write "Contents" permissions. **Just configure it
+for this repo**, not all of them!
+
 ## Making Configuration Changes
 
 All configuration (except for the datapacks, more on those later) are defined in this repository. If people are on the server 
