@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
 jobs:
     release:
       runs-on: ubuntu-latest
@@ -33,6 +34,8 @@ jobs:
           if: ${{ vars.HAS_OVERRIDES_FOLDER == 'false' }}
           run: zip -r server.zip modpack/mods
         - name: Create a Release
+          # Assume if we're using workflow_dispatch that there's no need for a new release
+          if: ${{ github.event_name == 'push' }}
           uses: softprops/action-gh-release@v2
           env:
             GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}

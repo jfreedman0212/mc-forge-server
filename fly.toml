@@ -5,12 +5,12 @@ primary_region = "atl"
 image = "itzg/minecraft-server:java21-alpine"
 
 [env]
-TYPE = "NEOFORGE"
+TYPE = "FORGE"
 VERSION = "1.20.1"
-NEOFORGE_VERSION = "latest"
+FORGE_VERSION = "47.3.0"
 EULA = "true"
 # modpack/datapack config
-GENERIC_PACK = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.14/server.zip"
+GENERIC_PACK = "https://github.com/jfreedman0212/mc-forge-server/releases/latest/download/server.zip"
 # non-vanillatweaks datapacks are manually installed via SSH/SFTP
 VANILLATWEAKS_SHARECODE = "NmOAok,vXcnMe,yoptLT,AtuqRB,zJ84rA"
 # heap size of 3 GB
@@ -39,12 +39,12 @@ SPAWN_PROTECTION = "0"
 ALLOW_FLIGHT = "TRUE"
 # Operator/admin config
 OVERRIDE_OPS = "true"
-OPS_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.14/ops.json"
+OPS_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/latest/download/ops.json"
 # Whitelist config
 OVERRIDE_WHITELIST = "true"
 ENABLE_WHITELIST = "true"
 ENFORCE_WHITELIST = "true"
-WHITELIST_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/download/v0.0.14/whitelist.json"
+WHITELIST_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/latest/download/whitelist.json"
 
 [mounts]
 source = "mc_data"
@@ -54,7 +54,7 @@ destination = "/data"
 internal_port = 25565
 protocol = "tcp"
 ports = { port = 25565 }
-auto_stop_machines = false
+auto_stop_machines = "off"
 auto_start_machines = true
 min_machines_running = 0
 concurrency = { type = "connections", hard_limit = 25, soft_limit = 20 }
