@@ -28,6 +28,7 @@ ENABLE_ROLLING_LOGS = "true"
 RCON_CMDS_STARTUP = """
         /gamerule keepInventory true
         /gamerule playersSleepingPercentage 1
+        /gamerule mobGriefing false
     """
 MODE = "survival"
 SERVER_NAME = "gay_minecraft"
