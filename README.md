@@ -44,6 +44,17 @@ for Linux and Mac and assume some familiarity with the terminal.
 
 # Server Administration
 
+## Dedicated IPv4 on Fly.io
+
+Since Minecraft uses raw TCP w/o TLS, you'll need a dedicated IPv4 address. As of writing, it costs $2/month and you
+can request one by running:
+
+```shell
+fly ips allocate-v4
+```
+
+Here are [the Fly docs](https://fly.io/docs/networking/services/#dedicated-ipv4) on it.
+
 ## External Repository Configuration
 
 There are 3 variables that get configured in GitHub for use in the Actions workflow:
@@ -87,4 +98,4 @@ to be completely sure I'm only allowing my friends.
 
 There's not an option in the Docker configuration (at least when I initially set it up in Summer 2023) to set up
 datapacks from a zip file. So, I've manually installed them through SFTP. This doesn't require a server restart
-in most cases. TODO: make this a more comprehensive, step-by-step guide
+in most cases. TODO: make this a more comprehensive, step-by-step guide.
