@@ -11,22 +11,32 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "Mind Craft 2 Boogaloo Forge",
-  "version": "The Sixth One",
+  "version": "The Seventh One",
   "author": "",
   "files": [
     {
+      "projectID": 659674,
+      "fileID": 5736627,
+      "required": true
+    },
+    {
       "projectID": 455982,
-      "fileID": 5721801,
+      "fileID": 5897118,
       "required": true
     },
     {
       "projectID": 398521,
-      "fileID": 5051242,
+      "fileID": 5878214,
+      "required": true
+    },
+    {
+      "projectID": 351264,
+      "fileID": 5402061,
       "required": true
     },
     {
       "projectID": 263420,
-      "fileID": 5773012,
+      "fileID": 5862235,
       "required": true
     },
     {
@@ -41,7 +51,7 @@
     },
     {
       "projectID": 60028,
-      "fileID": 5585290,
+      "fileID": 5919146,
       "required": true
     },
     {
@@ -91,7 +101,7 @@
     },
     {
       "projectID": 362479,
-      "fileID": 5844825,
+      "fileID": 5895583,
       "required": true
     },
     {
@@ -120,13 +130,18 @@
       "required": true
     },
     {
+      "projectID": 688768,
+      "fileID": 5331908,
+      "required": true
+    },
+    {
       "projectID": 367178,
       "fileID": 5640967,
       "required": true
     },
     {
       "projectID": 549225,
-      "fileID": 5811593,
+      "fileID": 5911986,
       "required": true
     },
     {
@@ -141,7 +156,7 @@
     },
     {
       "projectID": 267458,
-      "fileID": 5770402,
+      "fileID": 5941129,
       "required": true
     },
     {
