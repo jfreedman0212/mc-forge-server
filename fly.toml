@@ -12,7 +12,7 @@ EULA = "true"
 # modpack/datapack config
 GENERIC_PACK = "https://github.com/jfreedman0212/mc-forge-server/releases/latest/download/server.zip"
 # non-vanillatweaks datapacks are manually installed via SSH/SFTP
-VANILLATWEAKS_SHARECODE = "NmOAok,vXcnMe,yoptLT,AtuqRB,zJ84rA"
+VANILLATWEAKS_SHARECODE = "yQQGM6"
 # heap size of 3 GB
 MEMORY = "3G"
 # autostop kills the server after no one has connected for a configured
@@ -26,7 +26,6 @@ AUTOSTOP_PERIOD = "10"         # checks every 10 seconds for activity
 ENABLE_ROLLING_LOGS = "true"
 # MC Server config
 RCON_CMDS_STARTUP = """
-        /gamerule keepInventory true
         /gamerule playersSleepingPercentage 1
         /gamerule mobGriefing false
     """
@@ -34,7 +33,7 @@ MODE = "survival"
 SERVER_NAME = "gay_minecraft"
 MOTD = "gay minecraft"
 DIFFICULTY = "normal"
-SEED = "4354585255707245098"
+SEED = "81498"
 LEVEL = "gay_minecraft_v3"
 SPAWN_PROTECTION = "0"
 ALLOW_FLIGHT = "TRUE"
