@@ -49,6 +49,7 @@ WHITELIST_FILE = "https://github.com/jfreedman0212/mc-forge-server/releases/late
 [mounts]
 source = "mc_data"
 destination = "/data"
+initial_size = "6gb"
 
 [[services]]
 internal_port = 25565
