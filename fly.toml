@@ -1,5 +1,5 @@
 app = "gay-minecraft"
-primary_region = "atl"
+primary_region = "dfw"
 
 [build]
 image = "itzg/minecraft-server:java21-alpine"
