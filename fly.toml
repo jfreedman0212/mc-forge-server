@@ -2,7 +2,7 @@ app = "gay-minecraft"
 primary_region = "dfw"
 
 [build]
-image = "itzg/minecraft-server:java21-alpine"
+image = "itzg/minecraft-server:stable-java25"
 
 [env]
 TYPE = "FORGE"
