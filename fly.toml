@@ -34,7 +34,7 @@ SERVER_NAME = "gay_minecraft"
 MOTD = "gay minecraft"
 DIFFICULTY = "normal"
 SEED = "-7857578951488376789"
-LEVEL = "gay_minecraft_v3"
+LEVEL = "gay_minecraft_v4"
 SPAWN_PROTECTION = "0"
 ALLOW_FLIGHT = "TRUE"
 # Operator/admin config
