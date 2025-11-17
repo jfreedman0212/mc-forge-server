@@ -22,5 +22,17 @@
 		"name": "DangDani",
 		"level": 4,
 		"bypassesPlayerLimit": false
+	},
+	{
+		"uuid": "3a539a46-0af0-4733-b02f-a8ba2569abeb",
+		"name": "Yeledral",
+		"level": 4,
+		"bypassesPlayerLimit": false
+	},
+	{
+		"uuid": "1ab5e1b8-afc8-4354-8844-1ed8ca24f578",
+		"name": "MrFleshcage",
+		"level": 4,
+		"bypassesPlayerLimit": false
 	}
 ]

@@ -1,9 +1,5 @@
 [
 	{
-		"uuid": "3a539a46-0af0-4733-b02f-a8ba2569abeb",
-		"name": "Yeledral"
-	},
-	{
 		"uuid": "e27d9f95-5995-48a2-a5bf-eb062b65d28f",
 		"name": "ghostlywhale"
 	},
@@ -20,15 +16,15 @@
 		"name": "Cermitt"
 	},
 	{
-		"uuid": "1ab5e1b8-afc8-4354-8844-1ed8ca24f578",
-		"name": "MrFleshcage"
-	},
-	{
 		"uuid": "8dc9d91a-7378-4014-ad52-d581a0e609a5",
 		"name": "BigHarthy"
 	},
 	{
 		"uuid": "43aed71d-14bf-4e22-8936-2a4cb53aecdb",
 		"name": "TheDuffMcWhalen"
+	},
+	{
+		"uuid": "c8702811-6a84-48c3-8179-d3992ccccb70",
+		"name": "TuesdayEpisode"
 	}
 ]
