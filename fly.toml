@@ -13,8 +13,8 @@ EULA = "true"
 GENERIC_PACK = "https://github.com/jfreedman0212/mc-forge-server/releases/latest/download/server.zip"
 # non-vanillatweaks datapacks are manually installed via SSH/SFTP
 VANILLATWEAKS_SHARECODE = "yQQGM6"
-# heap size of 3 GB
-MEMORY = "3G"
+# heap size of 5 GB
+MEMORY = "5G"
 # autostop kills the server after no one has connected for a configured
 # amount of time. while this ACTUALLY turns off the underlying Fly Machine,
 # the config in [[services]] will turn it back on when someone connects
