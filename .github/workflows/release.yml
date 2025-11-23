@@ -47,6 +47,11 @@ jobs:
               server.zip
         - name: Setup Flyctl
           uses: superfly/flyctl-actions/setup-flyctl@master
+        - name: Remove existing datapack from server
+        - run: flyctl ssh console --command 'rm "gay_minecraft_v4/datapacks/Truly Merry.zip"'
+          env:
+            FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+        # We need to do this because Fly doesn't overwrite existing files with their SFTP command
         - name: Add extra datapacks to server
         - run: flyctl ssh sftp put 'datapacks/Truly Merry.zip' 'gay_minecraft_v4/datapacks/Truly Merry.zip'
           env:
