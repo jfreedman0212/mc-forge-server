@@ -1,5 +1,7 @@
 # Minecraft Forge Server
 
+TODO: this README needs to be fixed
+
 This is a [Minecraft Forge server](https://files.minecraftforge.net/net/minecraftforge/forge/) that's running some mods
 and hosted on [Fly.io](https://fly.io) for my friends. The repo has a couple uses that facilitate the server setup:
 
