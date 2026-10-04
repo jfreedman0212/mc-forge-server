@@ -19,9 +19,6 @@ jobs:
         - name: Download Client Mods from Curseforge
           working-directory: modpack
           run: python3 ../print_curseforge_urls.py | wget -q -i - -P mods/ --content-disposition --show-progress
-        - name: Download Server Mods from Curseforge
-          working-directory: modpack
-          run: cat ../server_only_mods.txt | wget -q -i - -P mods/ --content-disposition --show-progress
         - name: Put config folder in right place
           if: ${{ vars.HAS_OVERRIDES_FOLDER == 'true' }}
           run: |
@@ -29,10 +26,14 @@ jobs:
             rm -rf overrides
         - name: Create Server pack (with config)
           if: ${{ vars.HAS_OVERRIDES_FOLDER == 'true' }}
-          run: zip -r server.zip modpack/config modpack/mods
+          # zip from inside modpack/ so the archive contains config/ and mods/
+          # at the root instead of a nested modpack/ directory
+          working-directory: modpack
+          run: zip -r ../server.zip config mods
         - name: Create Server pack (without config)
           if: ${{ vars.HAS_OVERRIDES_FOLDER == 'false' }}
-          run: zip -r server.zip modpack/mods
+          working-directory: modpack
+          run: zip -r ../server.zip mods
         - name: Create a Release
           # Assume if we're using workflow_dispatch that there's no need for a new release
           if: ${{ github.event_name == 'push' }}
@@ -45,19 +46,4 @@ jobs:
               whitelist.json
               client.zip
               server.zip
-        - name: Setup Flyctl
-          uses: superfly/flyctl-actions/setup-flyctl@master
-        - name: Remove existing datapack from server
-        - run: flyctl ssh console --command 'rm "gay_minecraft_v4/datapacks/Truly Merry.zip"'
-          env:
-            FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-        # We need to do this because Fly doesn't overwrite existing files with their SFTP command
-        - name: Add extra datapacks to server
-        - run: flyctl ssh sftp put 'datapacks/Truly Merry.zip' 'gay_minecraft_v4/datapacks/Truly Merry.zip'
-          env:
-            FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-        - name: Deploy to Fly.io
-          run: flyctl deploy --remote-only
-          env:
-            FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
