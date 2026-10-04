@@ -15,10 +15,10 @@ The crux of this setup comes from [Geoff Bourne's Minecraft Server Docker image]
 
 ## General Server Info
 
-- URL: gay-minecraft.fly.dev
-- Minecraft version: 1.20.1
-- Mod manager: Forge
-- Forge version: 47.3.0
+- URL: 74.112.77.20:9035
+- Minecraft version: 1.21.1
+- Mod manager: Fabric
+- Forge version: 0.19.5
 
 If you aren't allowed, message me your username to add you to the whitelist.
 
