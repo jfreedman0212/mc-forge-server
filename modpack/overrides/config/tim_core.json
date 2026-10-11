@@ -1,0 +1,26 @@
+{
+  "expAllMultiplier": 1.0,
+  "enableExpAll": true,
+  "forceExpAll": false,
+  "addBucketToData": true,
+  "addSpawnCauseToData": true,
+  "preventQuickBallSpam": true,
+  "spawnBlacklist": [],
+  "spawnWhitelist": [],
+  "pokemonEntitiesAreInvulnerable": false,
+  "reservedPokemonEntitiesAreInvulnerable": true,
+  "requirePartyToFishPokemon": false,
+  "fossilMachineResurrectionTime": 14400,
+  "disableEvGain": false,
+  "bucketKeys": {
+    "common": "tim_core.buckets.common",
+    "uncommon": "tim_core.buckets.uncommon",
+    "rare": "tim_core.buckets.rare",
+    "ultra-rare": "tim_core.buckets.ultra_rare",
+    "boss": "tim_core.buckets.boss"
+  },
+  "unknownBucketKey": "tim_core.buckets.unknown",
+  "successKey": "tim_core.result.success",
+  "failureKey": "tim_core.result.failure",
+  "debug": false
+}

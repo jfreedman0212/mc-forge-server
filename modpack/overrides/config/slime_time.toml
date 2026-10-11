@@ -1,0 +1,37 @@
+[slimeTime]
+	# Whether to allow throwing slimeballs.
+	# default: true
+	throwableSlimeballs = true
+	# default: true
+	addSlimeBallToCombatTab = true
+
+[colorfulSlimes]
+	# Spawn colourful slimes, and allowing dyeing slimeballs and slime blocks and items.
+	# default: true
+	colourfulSlimes = true
+	# Whether the default Slime should be named Lime Slime or just Slime.
+	# default: true
+	renameDefaultSlimeToLime = true
+	# With the Colourful Slimes feature enabled, dyed variants of slime items are added to vanilla creative tabs. To avoid cluttering your creative menu, this can be disabled.
+	# default: true
+	addDyedVariantsToCreativeTabs = true
+
+[client]
+	# Whether thrown slimeballs should emit particles
+	# default: true
+	slimeballParticles = true
+	# Whether to play a sound when an entity with Slime Boots bounces.
+	# default: true
+	slimyBounceSound = true
+	# default: false
+	warnedAboutModefite = false
+
+[bounciness]
+	# Whether to allow bouncing horizontally, based on 26.2+ bounciness logic.
+	# Note that this replaces large parts of collision code, so mod conflicts may emerge.
+	# default: true
+	horizontalBounciness = true
+	# Whether to allow bouncing vertically, based on 26.2+ bounciness logic.
+	# Note that this replaces large parts of collision code, so mod conflicts may emerge.
+	# default: true
+	verticalBounciness = true

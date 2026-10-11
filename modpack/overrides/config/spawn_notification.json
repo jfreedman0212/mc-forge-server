@@ -1,0 +1,47 @@
+{
+  "broadcastRange": -1,
+  "playerLimit": -1,
+  "broadcastAcrossDimensions": false,
+  "actionBar": false,
+  "baseColor": "GRAY",
+  "partColors": {
+    "spawn_notification:pokemon_species": "WHITE",
+    "spawn_notification:pokemon_form": "WHITE",
+    "spawn_notification:player_name": "WHITE",
+    "spawn_notification:biome": "WHITE",
+    "spawn_notification:dimension": "WHITE",
+    "spawn_notification:bucket": "WHITE",
+    "spawn_notification:coord_x": "WHITE",
+    "spawn_notification:coord_y": "WHITE",
+    "spawn_notification:coord_z": "WHITE"
+  },
+  "disabledSituations": [],
+  "disabledSegments": [],
+  "disabledSegmentsBySituation": [
+    {
+      "situations": [
+        "spawn_notification:*/captured",
+        "spawn_notification:*/fished",
+        "spawn_notification:*/resurrected",
+        "spawn_notification:*/hatched"
+      ],
+      "segments": [
+        "spawn_notification:coordinates",
+        "spawn_notification:biome",
+        "spawn_notification:dimension"
+      ]
+    },
+    {
+      "situations": [
+        "spawn_notification:*/despawned",
+        "spawn_notification:*/snacked",
+        "spawn_notification:*/spawned"
+      ],
+      "segments": [
+        "spawn_notification:player"
+      ]
+    }
+  ],
+  "ignoreSpectators": true,
+  "debug": false
+}
